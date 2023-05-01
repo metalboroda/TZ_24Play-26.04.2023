@@ -837,8 +837,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362227220}
-  m_LocalRotation: {x: 0.21054335, y: -0.12583193, z: 0.027338745, w: 0.9690668}
-  m_LocalPosition: {x: 3.5, y: 8.75, z: -10}
+  m_LocalRotation: {x: 0.1473031, y: -0.11717725, z: 0.01757752, w: 0.98196864}
+  m_LocalPosition: {x: 3.45, y: 7.75, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1932,8 +1932,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997579985}
-  m_LocalRotation: {x: 0.21054335, y: -0.12583193, z: 0.027338745, w: 0.9690668}
-  m_LocalPosition: {x: 3.5, y: 8.75, z: -10}
+  m_LocalRotation: {x: 0.1473031, y: -0.11717725, z: 0.01757752, w: 0.98196864}
+  m_LocalPosition: {x: 3.45, y: 7.75, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22c526b9890fef4eb19d2eaa2661e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 1
+  intensity: 1.75
 --- !u!1 &1000618681
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,7 +3429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 3.5, y: 8.75, z: -10}
+  m_FollowOffset: {x: 3.45, y: 7.75, z: -11}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -3450,7 +3450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 2.5, z: 3.25}
+  m_TrackedObjectOffset: {x: 0, y: 3.25, z: 3.25}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -5280,7 +5280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3f946ea5a4b0d40bef57b4a1f2ff1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxPickablesCapacity>k__BackingField: 6
+  <MaxPickablesCapacity>k__BackingField: 7
   pickVFX: {fileID: 253324237633408118, guid: 054ec18da0a4bbd41a8af91dedfb26b9, type: 3}
   character: {fileID: 832749219006010672}
   holder: {fileID: 418644246}
@@ -5305,7 +5305,7 @@ MonoBehaviour:
     type: 3}
   lineRenderer: {fileID: 1414113552}
   points: []
-  maxPoints: 50
+  maxPoints: 60
 --- !u!136 &2257237881292196359
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class CameraHandler : MonoBehaviour {
     }
 
     private void Start() {
-        PickableHolderHandler.Instance.OnPickableStacking += Shake;
+        PickableHolderHandler.Instance.OnPickableRemove += Shake;
 
         perlinNoise.m_AmplitudeGain = 0;
     }

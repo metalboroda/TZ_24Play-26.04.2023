@@ -8,9 +8,9 @@ namespace __Game.Scripts.Item {
     public class Pickable : MonoBehaviour {
         [field: SerializeField] public bool InStack { get; private set; }
 
-        //Private
-        private bool canCollide = true;
+        [HideInInspector] public bool canCollide = true;
 
+        //Private
         private Rigidbody rb;
         private Collider coll;
 
@@ -45,8 +45,9 @@ namespace __Game.Scripts.Item {
         }
 
         private void CollideWithObstacle(Collision collision) {
-            if (collision.gameObject.TryGetComponent<ObstacleCube>(out var obstacle) && !obstacle.Collided && canCollide) {
-                canCollide = false;
+            if (!canCollide) return;
+
+            if (collision.gameObject.TryGetComponent<ObstacleCube>(out var obstacle) && !obstacle.Collided) {
                 obstacle.IsCollided(true);
                 rb.isKinematic = true;
                 rb.constraints = RigidbodyConstraints.FreezeAll;

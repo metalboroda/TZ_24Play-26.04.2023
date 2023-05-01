@@ -1,4 +1,5 @@
 using __Game.Scripts.Item;
+using CodeMonkey.Utils;
 using Lean.Pool;
 using System;
 using System.Collections.Generic;
@@ -67,8 +68,27 @@ namespace __Game.Scripts.Player {
 
             pickables.Remove(pickable);
             OnPickableRemove?.Invoke();
+            PickableInvincibilityFrames();
             CheckPickablesCounter();
             CheckMaxCapacityReached();
+        }
+
+        private void PickableInvincibilityFrames() {
+            FunctionTimer.Create(() => {
+                foreach (var item in pickables) {
+                    if (item.InStack) {
+                        item.canCollide = false;
+                    }
+                }
+            }, 0.5f);
+
+            FunctionTimer.Create(() => {
+                foreach (var item in pickables) {
+                    if (item.InStack) {
+                        item.canCollide = true;
+                    }
+                }
+            }, 1f);
         }
 
         private void CheckPickablesCounter() {
@@ -90,7 +110,7 @@ namespace __Game.Scripts.Player {
 
         private void SpawnPickVFX() {
             var spawnPos = new Vector3(pickables.First().transform.position.x,
-                pickables.First().transform.position.y + 1f,
+                pickables.First().transform.position.y + 0.5f,
                 pickables.First().transform.position.z);
 
             LeanPool.Spawn(pickVFX, spawnPos, Quaternion.identity);
