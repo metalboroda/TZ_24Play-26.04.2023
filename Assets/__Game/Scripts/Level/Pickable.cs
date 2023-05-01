@@ -55,9 +55,11 @@ namespace __Game.Scripts.Item {
 
                 //Unfreeze rb           
                 FunctionTimer.Create(() => {
-                    rb.isKinematic = false;
-                    rb.constraints &= ~RigidbodyConstraints.FreezeAll;
-                    transform.DOScale(0, 1f).OnComplete(() => { Destroy(gameObject); });
+                    if (rb != null) {
+                        rb.isKinematic = false;
+                        rb.constraints &= ~RigidbodyConstraints.FreezeAll;
+                        transform.DOScale(0, 1f).OnComplete(() => { Destroy(gameObject); });
+                    }
                 }, 0.25f);
             }
         }
