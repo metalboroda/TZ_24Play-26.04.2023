@@ -64,6 +64,7 @@ namespace __Game.Scripts.Player {
         private void SwitchRagdoll(bool change) {
             foreach (var rb in rigidbodies) {
                 rb.isKinematic = !change;
+                rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
             }
 
             foreach (var coll in colliders) {
